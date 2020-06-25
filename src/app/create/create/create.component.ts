@@ -48,7 +48,7 @@ export class CreateComponent implements OnInit {
   submit() {
     console.log(this.form.value);
     console.log(this.selectedPetId);
-    console.log("お疲れの様でした！");
+    console.log('お疲れの様でした！');
   }
 
 }
