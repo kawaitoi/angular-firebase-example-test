@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AuthService } from 'src/app/services/auth.service';
+import { AuthService } from 'src/app/service/auth.service';
 
 @Component({
   selector: 'app-welcome',
@@ -13,7 +13,7 @@ export class WelcomeComponent implements OnInit {
 
   ) {}
 
-  ngOnInit(): void {
+  ngOnInit() {
   }
 
   login() {

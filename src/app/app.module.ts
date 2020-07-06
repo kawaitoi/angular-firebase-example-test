@@ -13,6 +13,7 @@ import { AngularFireAuthModule } from '@angular/fire/auth';
 // 追加
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatSnackBarModule} from '@angular/material/snack-bar';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 @NgModule({
 
@@ -34,6 +35,6 @@ import { MatSnackBarModule} from '@angular/material/snack-bar';
     { provide: REGION, useValue: 'asia-northeast1' }
   ],
   bootstrap: [AppComponent],
-  declarations: [AppComponent]
+  declarations: [AppComponent, NotFoundComponent]
 })
 export class AppModule { }

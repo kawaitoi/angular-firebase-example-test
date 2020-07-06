@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators, FormControl } from '@angular/forms';
 import { SwiperConfigInterface } from 'ngx-swiper-wrapper';
+import { PetService } from 'src/app/service/pet.service';
+import { AuthService } from 'src/app/service/auth.service';
 
 @Component({
   selector: 'app-create',
@@ -39,16 +41,25 @@ export class CreateComponent implements OnInit {
   }
 
   constructor(
-    private fb: FormBuilder
+    private fb: FormBuilder,
+    private petService: PetService,
+    private authService: AuthService
   ) { }
 
   ngOnInit() {
   }
 
   submit() {
-    console.log(this.form.value);
-    console.log(this.selectedPetId);
-    console.log('お疲れの様でした！');
+    const formDate = this.form.value;
+    this.petService.createPet({
+      name: formDate.name,
+      gender: formDate.gender,
+      petImageId: this.selectedPetId,
+      level: 1,
+      exp: 0,
+      trainerID: this.authService.uid
+
+    });
   }
 
 }
