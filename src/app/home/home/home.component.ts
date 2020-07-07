@@ -15,7 +15,6 @@ export class HomeComponent implements OnInit {
     this.authService.uid
   );
 
-
   constructor(
     private petService: PetService,
     private authService: AuthService

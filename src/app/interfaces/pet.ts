@@ -5,4 +5,5 @@ export interface Pet {
   exp: number;
   trainerID: string;
   gender: 'male' | 'female';
+  ownerGitHubId: number;
 }

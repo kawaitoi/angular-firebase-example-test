@@ -57,8 +57,8 @@ export class CreateComponent implements OnInit {
       petImageId: this.selectedPetId,
       level: 1,
       exp: 0,
-      trainerID: this.authService.uid
-
+      trainerID: this.authService.uid,
+      ownerGitHubId: this.authService.githubId
     });
   }
 

@@ -1,6 +1,6 @@
 <router-outlet></router-outlet>
 
 <footer>
-  <button *ngIf= "user$ | async" (click)="logout()">ログアウト</button>
+  <button *ngIf= "user$ | async" (click)="logout()" mat-flat-button color="primary" >ログアウト</button>
   <p>&copy; Gitpet</p>
 </footer>
