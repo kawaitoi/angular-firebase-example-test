@@ -13,6 +13,7 @@ const expTable = [
   10000
 ];
 
+// test
 @Pipe({
   name: 'exp'
 })
@@ -27,7 +28,7 @@ export class ExpPipe implements PipeTransform {
 
 
     if(type === 'percent') {
-      //console.log(exp / nextExp * 100);
+      // console.log(exp / nextExp * 100);
       console.log(exp / nextExp * 100);
       return exp / nextExp * 100;
     }else{
